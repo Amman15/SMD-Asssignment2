@@ -231,3 +231,221 @@ fun weatherUI() {
 fun PreviewWeatherUI() {
     weatherUI()
 }
+
+@Composable
+fun Location() {
+    Column(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth().weight(2f)
+        ) {
+            Column(
+                modifier = Modifier.weight(2f).fillMaxHeight()
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().weight(1f).padding(20.dp)
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Icon(
+                            imageVector = Icons.Default.ArrowBack,
+                            contentDescription = null,
+                            tint = Color.LightGray,
+                            modifier = Modifier.size(25.dp)
+                        )
+                    }
+                    Column(modifier = Modifier.weight(3f)) {
+                        Text(
+                            text = "LOCATIONS",
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = Color(0xFF424312)
+                        )
+                    }
+                    Column() {
+                        Icon(
+                            imageVector = Icons.Default.List,
+                            contentDescription = null,
+                            tint = Color.LightGray,
+                            modifier = Modifier.size(25.dp)
+                        )
+                    }
+                }
+
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(40.dp)
+                ) {
+                    Text(
+                        text = "You are currently getting results from popular places.",
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Medium,
+                        fontFamily = FontFamily.SansSerif,
+                        color = Color.DarkGray
+                    )
+                }
+
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth().padding(20.dp),
+                ) {
+                    Button(
+                        onClick = {},
+                        modifier = Modifier.width(140.dp).clip(CircleShape),
+                        colors = ButtonDefaults.buttonColors(Color.LightGray)
+                    ) {
+                        Text(
+                            text = "Choose place",
+                            fontFamily = FontFamily.Serif,
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 13.sp ,
+                            color = Color(0xFF5C6AC7))
+                    }
+                }
+            }
+            Column(
+                modifier = Modifier.weight(1f).fillMaxHeight().background(Color.LightGray),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Add,
+                    contentDescription = null,
+                    tint = Color(0xFF424242),
+                    modifier = Modifier.size(40.dp).padding(vertical = 7.dp)
+                )
+                Text(
+                    text = "ADD PLACE",
+                    color = Color(0xFF424242),
+                    fontFamily = FontFamily.SansSerif,
+                    fontSize = 17.sp,
+                    fontWeight = FontWeight.SemiBold
+                )
+            }
+        }
+
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color(0xFF5C6BC0))
+                .weight(1f)
+                .padding(8.dp),
+            horizontalArrangement = Arrangement.Center,
+        ) {
+
+            Column(
+                modifier= Modifier
+                    .weight(2f)
+                    .padding(horizontal = 30.dp, vertical = 30.dp),
+            )
+            {
+                Text("Mumbai",
+                    fontSize = 30.sp,
+                    textAlign = TextAlign.Center,
+                    color = Color.White,
+                    fontFamily = FontFamily.Serif,
+                    fontWeight = FontWeight.SemiBold
+                )
+                Text("Humidity : 51%",
+                    fontSize = 16.sp,
+                    textAlign = TextAlign.Center,
+                    color = Color(0xFFB0B0B0) ,
+                    fontFamily = FontFamily.SansSerif,
+                    fontWeight = FontWeight.Normal)
+            }
+
+            Row(
+                modifier= Modifier
+
+                    .padding(10.dp)
+                    .fillMaxHeight(),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            )
+            {
+                Text("28, Sunny", fontSize = 20.sp, textAlign = TextAlign.Center, fontWeight = FontWeight.Bold, color = Color(0xFFE65100))
+            }
+        }
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .padding(8.dp),
+            horizontalArrangement = Arrangement.Center,
+        ) {
+
+            Column(
+                modifier= Modifier
+                    .weight(2f)
+                    .padding(horizontal = 30.dp, vertical = 30.dp),
+            )
+            {
+                Text("Indore", fontSize = 30.sp,
+                    textAlign = TextAlign.Center,
+                    color = Color.DarkGray,
+                    fontFamily = FontFamily.Serif,
+                    fontWeight = FontWeight.SemiBold)
+                Text("Humidity : 35%",  fontSize = 16.sp,
+                    textAlign = TextAlign.Center,
+                    color = Color(0xFFB0B0B0) ,
+                    fontFamily = FontFamily.SansSerif,
+                    fontWeight = FontWeight.Normal)
+            }
+
+            Row(
+                modifier= Modifier
+                    .padding(10.dp)
+                    .fillMaxHeight(),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            )
+            {
+                Text("24, Smoke", fontSize = 20.sp, textAlign = TextAlign.Center, fontWeight = FontWeight.Bold, color = Color(0xFF5C6BC0))
+            }
+        }
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .padding(8.dp),
+            horizontalArrangement = Arrangement.Center,
+        ) {
+            Column(
+                modifier= Modifier
+                    .weight(2f)
+                    .padding(horizontal = 30.dp, vertical = 30.dp),
+            )
+            {
+                Text("Bhopal",  fontSize = 30.sp,
+                    textAlign = TextAlign.Center,
+                    color = Color.DarkGray,
+                    fontFamily = FontFamily.Serif,
+                    fontWeight = FontWeight.SemiBold)
+                Text("Humidity : 35%", fontSize = 16.sp,
+                    textAlign = TextAlign.Center,
+                    color = Color(0xFFB0B0B0) ,
+                    fontFamily = FontFamily.SansSerif,
+                    fontWeight = FontWeight.Normal)
+            }
+
+            Row(
+                modifier= Modifier
+                    .padding(10.dp)
+                    .fillMaxHeight(),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            )
+            {
+                Text("21, Clear", fontSize = 20.sp, textAlign = TextAlign.Center, fontWeight = FontWeight.Bold, color = Color(0xFF5C6BC0))
+            }
+        }
+    }
+}
+
+@Preview
+@Composable
+fun LocationPreview() {
+    Location()
+}
